@@ -9,10 +9,11 @@ app.use(express.json());
 app.use(express.static(path.join(__dirname)));
 
 const db = mysql.createConnection({
-    host: 'localhost',
-    user: 'root',
-    password: 'root',
-    database: "attendance_system"
+    host: process.env.MYSQLHOST || 'localhost',
+    user: process.env.MYSQLUSER || 'root',
+    password: process.env.MYSQLPASSWORD || 'root',
+    database: process.env.MYSQLDATABASE || 'attendance_system',
+    port: process.env.MYSQLPORT || 3306
 });
 
 db.connect((err) => {
