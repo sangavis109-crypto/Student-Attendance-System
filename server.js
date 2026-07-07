@@ -18,25 +18,12 @@ const db = mysql.createPool({
     connectionLimit: 10,
     queueLimit: 0
 });
-db.connect((err) => {
-
+db.query("TRUNCATE TABLE attendance", (err) => {
     if(err){
-        console.log("DB Connection Failed ❌", err);
-        return;
+        console.log(err);
+    } else {
+        console.log("Attendance Table Cleared ✅");
     }
-
-    console.log("DB Connected ✅");
-
-    db.query("TRUNCATE TABLE attendance", (err) => {
-
-        if(err){
-            console.log(err);
-        }else{
-            console.log("Attendance Table Cleared ✅");
-        }
-
-    });
-
 });
 
 app.post('/login', (req, res) => {
