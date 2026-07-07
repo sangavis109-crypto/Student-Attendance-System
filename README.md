@@ -2,7 +2,7 @@
 
 A full-stack web application to manage and track student attendance efficiently. Built with Node.js, Express.js, and MySQL, and deployed live on Railway.
 
-🔗 Live Demo: student-attendance-system-production-987f.up.railway.app
+🔗 **Live Demo:** [student-attendance-system-production-987f.up.railway.app](https://student-attendance-system-production-987f.up.railway.app)
 
 
 📌 Features
