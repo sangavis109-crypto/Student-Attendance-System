@@ -126,9 +126,9 @@ body{
 
     function resetAttendance(){
 
-        fetch("http://localhost:3000/reset-attendance",{
-            method:"DELETE"
-        })
+        fetch("/reset-attendance",{
+    method:"DELETE"
+})
         .then(res => res.json())
         .then(data => {
 
